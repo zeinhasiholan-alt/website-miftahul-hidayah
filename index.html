@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Majelis Taklim Miftahul Hidayah | Official Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #064e3b; 
+            --secondary: #10b981;
+            --accent: #fbbf24; /* Gold warna baru untuk Selamat Datang */
+            --dark: #0f172a;
+            --light: #f8fafc;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--light); color: var(--dark); overflow-x: hidden; }
+
+        /* --- Floating Navigation Buttons --- */
+        .floating-actions {
+            position: fixed; bottom: 30px; right: 20px;
+            display: flex; flex-direction: column; gap: 12px; z-index: 999;
+        }
+        .float-btn {
+            width: 60px; height: 60px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            text-decoration: none; color: white; font-size: 24px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .float-btn:hover { transform: scale(1.1) rotate(5deg); }
+        .btn-sholat { background: var(--primary); border: 2px solid var(--accent); }
+        .btn-fb { background: #1877F2; }
+
+        /* --- Hero Section dengan Foto Masjidil Haram --- */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), 
+                        url('https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?q=80&w=2000'); /* Foto Masjidil Haram */
+            background-attachment: fixed; background-size: cover; background-position: center;
+            display: flex; align-items: center; justify-content: center; text-align: center; color: white;
+        }
+        .hero-box { padding: 40px; background: rgba(0,0,0,0.3); backdrop-filter: blur(10px); border-radius: 30px; border: 1px solid rgba(255,255,255,0.1); max-width: 800px; margin: 20px; }
+        
+        /* Ganti warna kata Selamat Datang */
+        .welcome-text { 
+            color: var(--accent); 
+            font-size: 1.1rem; 
+            font-weight: 800; 
+            letter-spacing: 4px; 
+            margin-bottom: 10px; 
+            display: block;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .hero-box h1 { font-family: 'Amiri', serif; font-size: clamp(40px, 8vw, 70px); margin-bottom: 10px; color: #fff; }
+        .hero-box p.subtitle { font-size: 1.2rem; font-weight: 300; letter-spacing: 1px; margin-bottom: 30px; opacity: 0.9; }
+
+        /* --- Agenda Section --- */
+        .container { max-width: 1200px; margin: 0 auto; padding: 80px 20px; }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header h2 { font-size: 36px; color: var(--primary); font-weight: 800; text-transform: uppercase; letter-spacing: 2px; }
+        .underline { width: 80px; height: 4px; background: var(--accent); margin: 15px auto; border-radius: 2px; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .feature-card {
+            background: white; padding: 40px; border-radius: 25px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            transition: 0.4s; border-bottom: 4px solid transparent;
+        }
+        .feature-card:hover { transform: translateY(-10px); border-bottom-color: var(--primary); }
+        .feature-card span { font-size: 40px; margin-bottom: 20px; display: block; }
+        .feature-card h3 { color: var(--primary); margin-bottom: 15px; font-size: 22px; }
+        .feature-card p { color: #64748b; font-size: 15px; line-height: 1.8; }
+
+        /* --- Facebook Section --- */
+        .cta-fb {
+            background: var(--primary); color: white; border-radius: 40px; padding: 60px;
+            display: flex; flex-direction: column; align-items: center; text-align: center;
+            margin-top: 50px; background-image: radial-gradient(circle at top right, var(--secondary), transparent);
+        }
+        .btn-visit-fb {
+            background: white; color: var(--primary); padding: 15px 40px; border-radius: 50px;
+            text-decoration: none; font-weight: 800; display: inline-flex; align-items: center; gap: 10px;
+            transition: 0.3s; margin-top: 20px;
+        }
+        .btn-visit-fb:hover { background: var(--accent); color: var(--dark); }
+
+        footer { text-align: center; padding: 50px; color: #94a3b8; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <div class="floating-actions">
+        <a href="https://majelis-miftahul-hidayah.vercel.app/" class="float-btn btn-sholat" title="Jadwal Sholat">🕌</a>
+        <a href="https://www.facebook.com/aby.a.fathir" target="_blank" class="float-btn btn-fb" title="Facebook Kami">f</a>
+    </div>
+
+    <section class="hero">
+        <div class="hero-box">
+            <span class="welcome-text">SELAMAT DATANG DI</span>
+            <h1>Miftahul Hidayah</h1>
+            <p class="subtitle">Wadah pencari ilmu, tempat hati bersandar pada Ridho Illahi.</p>
+            <a href="#tentang" style="text-decoration: none; color: white; border: 1px solid white; padding: 12px 30px; border-radius: 50px; font-weight: 600;">Profil Majelis</a>
+        </div>
+    </section>
+
+    <section class="container" id="tentang">
+        <div class="section-header">
+            <h2>Agenda Khidmat</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="grid">
+            <div class="feature-card">
+                <span>📖</span>
+                <h3>Kajian Rutin</h3>
+                <p>Pendalaman Kitab Kuning dan Fiqih dasar di pengajian majelis-miftahul-hidayah. Terbuka untuk umum.</p>
+            </div>
+            <div class="feature-card">
+                <span>ﷺ</span>
+                <h3>Sholawat kepada Nabi Muhammad</h3>
+                <p>Malam Jumat menjadi momentum mempererat cinta kepada nabi melalui pembacaan diba al-barzanji dan Mahalul qiyam.</p>
+            </div>
+            <div class="feature-card">
+                <span>🤝</span>
+                <h3>Kerja sama</h3>
+                <p>Saling tolong monolong serta ikhlas dalam membantu orang lain.</p>
+            </div>
+        </div>
+
+        <div class="cta-fb">
+            <h2>Terhubung Secara Digital</h2>
+            <p>Dapatkan update video pengajian, foto kegiatan, dan quote harian langsung dari akun resmi Facebook kami.</p>
+            <a href="https://www.facebook.com/aby.a.fathir" target="_blank" class="btn-visit-fb">
+                Kunjungi Profil Facebook
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Majelis Taklim Miftahul Hidayah AL-Bakti.</p>
+    </footer>
+
+</body>
+</html>
